@@ -6,10 +6,10 @@ import org.bitbucket.votonovo.crypto.ByteSource;
 import org.bitbucket.votonovo.crypto.TextBytes;
 import org.junit.Test;
 
-public class Base64Test {
+public class Base16Test {
     
     private static final String[] INPUTS = { "pleasure.", "leasure.", "easure.", "asure.", "sure." };
-    private static final String[] OUTPUTS = { "cGxlYXN1cmUu", "bGVhc3VyZS4=", "ZWFzdXJlLg==", "YXN1cmUu", "c3VyZS4=" };
+    private static final String[] OUTPUTS = { "706c6561737572652e", "6c6561737572652e", "6561737572652e", "61737572652e", "737572652e" };
 
     @Test
     public void encodeTest() {
@@ -25,7 +25,7 @@ public class Base64Test {
         ).expected(
             new Transformed.Mapping<ByteSource, StringEncoded>() {
                 public StringEncoded map(ByteSource input) {
-                    return new Base64Encoded(input);
+                    return new Base16Encoded(input);
                 }
             },
             Arrays.asList(OUTPUTS)
