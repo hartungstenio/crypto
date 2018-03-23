@@ -28,7 +28,7 @@ public class Base16Encoded implements StringEncoded {
         
         for(byte b : this.bytes.getBytes()) {
             String bHex = Integer.toHexString(b & 0xff);
-            if(bHex.length() == 0) hexStr.append("0");
+            if(bHex.length() == 1) hexStr.append("0");
             hexStr.append(bHex);
         }
         

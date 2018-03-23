@@ -1,8 +1,9 @@
-package org.bitbucket.votonovo.crypto.encoding;
+package org.bitbucket.votonovo.crypto.util;
 
 import java.util.Iterator;
 
 import org.bitbucket.votonovo.crypto.ByteSource;
+import org.bitbucket.votonovo.crypto.encoding.StringEncoded;
 import org.junit.Assert;
 
 /**
@@ -11,7 +12,7 @@ import org.junit.Assert;
  * @author Christian Hartung <hartung@live.com>
  *
  */
-public final class StringEncodingTest {
+public final class ListAssert {
     
     private final Iterable<ByteSource> inputs;
    
@@ -20,7 +21,7 @@ public final class StringEncodingTest {
      * 
      * @param inputs The source sample data
      */
-    public StringEncodingTest(final Iterable<ByteSource> inputs) {
+    public ListAssert(final Iterable<ByteSource> inputs) {
         this.inputs = inputs;
     }
     

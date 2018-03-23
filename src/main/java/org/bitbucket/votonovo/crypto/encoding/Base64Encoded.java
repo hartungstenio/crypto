@@ -53,10 +53,10 @@ public class Base64Encoded implements StringEncoded {
         sb.append(BASE64_TABLE.charAt(i));
         
         i = octets >> 6 & 0x3f;
-        sb.append(i > 0 ? BASE64_TABLE.charAt(i) : '=');
+        sb.append(len > 1 ? BASE64_TABLE.charAt(i) : '=');
         
         i = octets & 0x3f;
-        sb.append(i > 0 ? BASE64_TABLE.charAt(i) : '=');
+        sb.append(len > 2 ? BASE64_TABLE.charAt(i) : '=');
     }
     
     public String toString() {

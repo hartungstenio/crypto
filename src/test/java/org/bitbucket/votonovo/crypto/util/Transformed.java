@@ -1,4 +1,4 @@
-package org.bitbucket.votonovo.crypto.encoding;
+package org.bitbucket.votonovo.crypto.util;
 
 import java.util.Iterator;
 
