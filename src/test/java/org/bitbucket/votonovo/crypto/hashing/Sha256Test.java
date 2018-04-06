@@ -2,8 +2,8 @@ package org.bitbucket.votonovo.crypto.hashing;
 
 import java.util.Arrays;
 
-import org.bitbucket.votonovo.crypto.ByteSource;
-import org.bitbucket.votonovo.crypto.TextBytes;
+import org.bitbucket.votonovo.crypto.Data;
+import org.bitbucket.votonovo.crypto.TextData;
 import org.bitbucket.votonovo.crypto.encoding.Base16Encoded;
 import org.bitbucket.votonovo.crypto.encoding.StringEncoded;
 import org.bitbucket.votonovo.crypto.util.ListAssert;
@@ -32,17 +32,17 @@ public class Sha256Test {
     @Test
     public void hashTest() {
         new ListAssert(
-            new Transformed<String, ByteSource>(
-                new Transformed.Mapping<String, ByteSource>() {
-                    public ByteSource map(String input) {
-                        return new TextBytes(input);
+            new Transformed<String, Data>(
+                new Transformed.Mapping<String, Data>() {
+                    public Data map(String input) {
+                        return new TextData(input);
                     }
                 },
                 Arrays.asList(INPUTS)
             )
         ).expected(
-            new Transformed.Mapping<ByteSource, StringEncoded>() {
-                public StringEncoded map(ByteSource input) {
+            new Transformed.Mapping<Data, StringEncoded>() {
+                public StringEncoded map(Data input) {
                     return new Base16Encoded(new Sha256Of(input));
                 }
             },

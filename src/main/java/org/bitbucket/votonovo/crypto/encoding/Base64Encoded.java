@@ -2,7 +2,7 @@ package org.bitbucket.votonovo.crypto.encoding;
 
 import java.io.IOException;
 
-import org.bitbucket.votonovo.crypto.ByteSource;
+import org.bitbucket.votonovo.crypto.Data;
 
 /**
  * Base64 encoded data
@@ -15,14 +15,14 @@ public class Base64Encoded implements StringEncoded {
     private static final String BASE64_TABLE = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 
 
-    private final ByteSource bytes;
+    private final Data bytes;
     
     /**
      * Ctor.
      * 
      * @param bytes The data to encode
      */
-    public Base64Encoded(final ByteSource bytes) {
+    public Base64Encoded(final Data bytes) {
         this.bytes = bytes;
     }
     

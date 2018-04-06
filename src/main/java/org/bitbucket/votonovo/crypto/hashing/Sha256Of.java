@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-import org.bitbucket.votonovo.crypto.ByteSource;
+import org.bitbucket.votonovo.crypto.Data;
 
 /**
  * Hash tha data using SHA-256
@@ -12,16 +12,16 @@ import org.bitbucket.votonovo.crypto.ByteSource;
  * @author Christian Hartung <hartung@live.com>
  * @since 0.0.1
  */
-public final class Sha256Of implements ByteSource {
+public final class Sha256Of implements Data {
     
-    private final ByteSource input;
+    private final Data input;
     
     /**
      * Ctor.
      * 
      * @param input The data to hash
      */
-    public Sha256Of(final ByteSource input) {
+    public Sha256Of(final Data input) {
         this.input = input;
     }
 

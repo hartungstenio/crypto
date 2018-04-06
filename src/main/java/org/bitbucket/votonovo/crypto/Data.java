@@ -31,7 +31,7 @@ import java.io.IOException;
  * @author Christian Hartung <hartung@live.com>
  * @since 0.0.1
  */
-public interface ByteSource {
+public interface Data {
     
     /**
      * Get a byte array from the source

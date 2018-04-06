@@ -35,7 +35,7 @@ import org.w3c.dom.Text;
  * @author Christian Hartung <hartung@live.com>
  * @since 0.0.1
  */
-public final class TextBytes implements ByteSource {
+public final class TextData implements Data {
     
     private final CharSequence text;
     private final Charset charset;
@@ -47,7 +47,7 @@ public final class TextBytes implements ByteSource {
      * 
      * @param text The text
      */
-    public TextBytes(final CharSequence text) {
+    public TextData(final CharSequence text) {
         this(text, StandardCharsets.UTF_8);
     }
     
@@ -57,7 +57,7 @@ public final class TextBytes implements ByteSource {
      * @param text The text
      * @param charset The encoding
      */
-    public TextBytes(final CharSequence text, final Text charset) {
+    public TextData(final CharSequence text, final Text charset) {
         this(text, Charset.forName(charset.toString()));
     }
     
@@ -67,7 +67,7 @@ public final class TextBytes implements ByteSource {
      * @param text The text
      * @param charset The encoding
      */
-    public TextBytes(final CharSequence text, final CharSequence charset) {
+    public TextData(final CharSequence text, final CharSequence charset) {
         this(text, Charset.forName(charset.toString()));
     }
     
@@ -77,7 +77,7 @@ public final class TextBytes implements ByteSource {
      * @param text The text
      * @param charset The encoding
      */
-    public TextBytes(final CharSequence text, final Charset charset) {
+    public TextData(final CharSequence text, final Charset charset) {
         this.text = text;
         this.charset = charset;
     }

@@ -2,7 +2,7 @@ package org.bitbucket.votonovo.crypto.encoding;
 
 import java.io.IOException;
 
-import org.bitbucket.votonovo.crypto.ByteSource;
+import org.bitbucket.votonovo.crypto.Data;
 
 /**
  * Base16 (hexadecimal) encoding
@@ -12,14 +12,14 @@ import org.bitbucket.votonovo.crypto.ByteSource;
  */
 public class Base16Encoded implements StringEncoded {
     
-    private final ByteSource bytes;
+    private final Data bytes;
     
     /**
      * Ctor.
      * 
      * @param bytes The data to encode
      */
-    public Base16Encoded(final ByteSource bytes) {
+    public Base16Encoded(final Data bytes) {
         this.bytes = bytes;
     }
     
