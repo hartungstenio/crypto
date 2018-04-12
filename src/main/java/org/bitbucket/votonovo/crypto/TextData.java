@@ -30,7 +30,7 @@ import java.nio.charset.StandardCharsets;
 import org.w3c.dom.Text;
 
 /**
- * Extracts bytes from a string
+ * Represents textual data as binary
  * 
  * @author Christian Hartung <hartung@live.com>
  * @since 0.0.1

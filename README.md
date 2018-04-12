@@ -3,7 +3,7 @@
 
 ## Overview
 
-oo-crypto is a package of pure-Java object oriented utilities for dealing with encryptation and encoding of data.
+oo-crypto is a package of pure-Java object oriented utilities for dealing with encryption and encoding of data.
 
 ## Usage
 
